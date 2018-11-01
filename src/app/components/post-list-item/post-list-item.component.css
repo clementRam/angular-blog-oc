@@ -1,0 +1,56 @@
+.post{
+    margin-top: 1rem;
+    padding: 3rem;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+}
+
+.post.like{
+    background-color: rgb(76, 175, 80, 0.7);
+}
+
+.post.not-like{
+    background-color: rgb(244, 67, 54, 0.7);
+}
+
+.post > h1{
+    margin-top: 0px;
+}
+
+.post > p{
+    text-align: justify;
+}
+
+.post > .created-at{
+    font-style: italic;
+}
+
+button{
+    padding: 10px 20px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button.btn-not-like{
+    background-color: rgb(244, 67, 54);
+    color: #fff;
+}
+
+button.btn-like{
+    background-color: rgb(76, 175, 80);
+    color: #fff;
+}
+
+
+div.btn{
+    float: right;
+}
