@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Post} from './interfaces/post';
 import {PostService} from './services/post.service';
 import {Subscription} from 'rxjs';
 
@@ -24,6 +23,5 @@ export class AppComponent implements OnInit {
       }
     );
     this.postService.emitPostsSubject();
-    console.log(this.postList);
   }
 }

@@ -6,8 +6,9 @@
     {{ post.content }}
   </p>
   <span class="created-at">Posté le : {{ post.created_at | date:'dd/MM/yyyy' }} à {{ post.created_at | date:'HH:mm' }}</span>
-  <div class="btn">
+  <div class="buttons">
     <button (click)="addLike()" class="btn-like">Like</button>
     <button (click)="substractLike()" class="btn-not-like">Don't like</button>
+    <button (click)="deletePost()"  class="btn-delete">Supprimer</button>
   </div>
 </div>
