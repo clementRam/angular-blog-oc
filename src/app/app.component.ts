@@ -17,11 +17,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.postSubscription = this.postService.postsSubject.subscribe(
-      (posts: any[]) => {
-        this.postList = posts;
-      }
-    );
-    this.postService.emitPostsSubject();
+
   }
 }

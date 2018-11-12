@@ -1,1 +1,13 @@
-<app-post-list [postList]="postList"></app-post-list>
+<nav class="navbar-default">
+  <ul>
+    <li>
+      <a routerLink="posts" routerLinkActive="active">Posts</a>
+    </li>
+    <li>
+      <a routerLink="new" routerLinkActive="active">Ajouter un post</a>
+    </li>
+  </ul>
+</nav>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,31 @@
+nav.navbar-default{
+  position: absolute;
+  top: 0;
+  padding: 10px;
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  display: inline;
+  font-size: 14px;
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+
+div.container{
+  padding-top: 60px;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+a.active{
+  text-decoration: underline;
+}
