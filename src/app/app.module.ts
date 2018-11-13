@@ -11,7 +11,6 @@ import { PostsComponent } from './posts/posts.component';
 const appRoutes: Route = [
   {path: 'posts', component: PostsComponent},
   {path: 'new', component: NewPostComponent},
-  {path: '', component: PostListComponent}
 ];
 
 @NgModule({
