@@ -37,4 +37,8 @@ export class PostService {
   deletePost(post: Post) {
     this.posts = this.posts.filter(item => item.id !== post.id);
   }
+
+  getNewId(){
+    return this.posts[this.posts.length - 1].id + 1;
+  }
 }

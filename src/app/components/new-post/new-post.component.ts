@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
+import { PostService } from 'src/app/services/post.service';
+import { Post } from 'src/app/interfaces/post';
 
 @Component({
   selector: 'app-new-post',
@@ -8,12 +10,16 @@ import {NgForm} from '@angular/forms';
 })
 export class NewPostComponent implements OnInit {
 
-  constructor() { }
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
   }
 
   onSubmit(form: NgForm){
-    console.log(form.value)    
+    console.log(form.value)
+    let newPost: Post = form.value;
+    newPost.id = this.postService.getNewId();
+    newPost.loveIts = 0;
+    this.postService.addPost(newPost);
   }
 }
