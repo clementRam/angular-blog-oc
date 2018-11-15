@@ -1,9 +1,15 @@
 <form (ngSubmit)="onSubmit(f)" #f="ngForm">
   <div>
-      <input type="text" name="title" ngModel>
+    <div>
+        <label for="title">Titre</label>
+    </div>
+    <input type="text" name="title" ngModel>
   </div>
   <div>
-      <textarea type="text" name="content" ngModel></textarea>
+    <div>
+        <label for="content">Contenu</label>      
+    </div>
+    <textarea type="text" name="content" rows="10" ngModel></textarea>
   </div>
   <input type="submit" value="Send">
 </form>
