@@ -4,13 +4,14 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {PostListComponent} from './components/post-list/post-list.component';
 import {PostListItemComponent} from './components/post-list-item/post-list-item.component';
-import {Route, RouterModule} from '@angular/router';
-import { NewPostComponent } from './new-post/new-post.component';
-import { PostsComponent } from './posts/posts.component';
+import { RouterModule, Routes} from '@angular/router';
+import { NewPostComponent } from './components/new-post/new-post.component';
+import { PostsComponent } from './components/posts/posts.component';
+import { FormsModule } from '@angular/forms';
 
-const appRoutes: Route = [
+const appRoutes: Routes = [
   {path: 'posts', component: PostsComponent},
-  {path: 'new', component: NewPostComponent},
+  {path: 'new', component: NewPostComponent}
 ];
 
 @NgModule({
@@ -19,11 +20,12 @@ const appRoutes: Route = [
     PostListComponent,
     PostListItemComponent,
     NewPostComponent,
-    PostsComponent
+    PostsComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
