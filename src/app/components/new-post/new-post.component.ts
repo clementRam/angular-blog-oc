@@ -17,7 +17,6 @@ export class NewPostComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    console.log(form.value)
     let newPost: Post = form.value;
     newPost.id = this.postService.getNewId();
     newPost.loveIts = 0;

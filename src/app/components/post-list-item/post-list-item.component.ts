@@ -26,7 +26,6 @@ export class PostListItemComponent implements OnInit {
   }
 
   deletePost() {
-    console.log(this.post);
     this.postService.deletePost(this.post);
     this.postService.emitPostsSubject();
   }

@@ -24,4 +24,8 @@ export class PostsComponent implements OnInit {
     this.postService.emitPostsSubject();
   }
 
+  ngOnDestroy(): void {
+    this.postSubscription.unsubscribe();
+  }
+
 }
