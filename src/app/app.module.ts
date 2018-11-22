@@ -8,10 +8,15 @@ import { RouterModule, Routes} from '@angular/router';
 import { NewPostComponent } from './components/new-post/new-post.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './components/users/users.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { HeaderComponent } from './components/header/header.component';
 
 const appRoutes: Routes = [
   {path: 'posts', component: PostsComponent},
   {path: 'new', component: NewPostComponent},
+  {path: 'users', component: UsersComponent},
   {path: '**', component: PostsComponent}
 ];
 
@@ -22,11 +27,15 @@ const appRoutes: Routes = [
     PostListItemComponent,
     NewPostComponent,
     PostsComponent,
+    UsersComponent,
+    SignupComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
