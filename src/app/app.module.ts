@@ -10,8 +10,6 @@ import { PostsComponent } from './components/posts/posts.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './components/users/users.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { HeaderComponent } from './components/header/header.component';
 
 const appRoutes: Routes = [
   {path: 'posts', component: PostsComponent},
@@ -28,8 +26,6 @@ const appRoutes: Routes = [
     NewPostComponent,
     PostsComponent,
     UsersComponent,
-    SignupComponent,
-    HeaderComponent,
   ],
   imports: [
     BrowserModule,
