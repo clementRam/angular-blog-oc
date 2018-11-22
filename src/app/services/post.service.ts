@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Subject} from 'rxjs';
+import {Subject, Observable} from 'rxjs';
 import {Post} from '../interfaces/post';
+import { Users } from '../interfaces/users.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +27,8 @@ export class PostService {
     }
   ];
 
+constructor(private http: HttpClient) {}
+
   emitPostsSubject() {
     this.postsSubject.next(this.posts.slice());
   }
@@ -38,7 +42,7 @@ export class PostService {
     this.posts = this.posts.filter(item => item.id !== post.id);
   }
 
-  getNewId(){
+  getNewId() {
     return this.posts[this.posts.length - 1].id + 1;
   }
 }

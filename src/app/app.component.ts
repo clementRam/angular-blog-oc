@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {PostService} from './services/post.service';
 import {Subscription} from 'rxjs';
+import * as firebase from 'firebase';
+
 
 @Component({
   selector: 'app-root',
@@ -13,10 +15,10 @@ export class AppComponent implements OnInit {
   public postList: any;
   public postSubscription: Subscription;
 
-  constructor(private postService: PostService) {
+
+  constructor() {
   }
 
   ngOnInit() {
-
   }
 }
