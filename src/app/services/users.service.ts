@@ -29,4 +29,9 @@ export class UsersService {
     const userParam = new HttpParams().set('name', user.name);
     return this.http.post<any>('http://localhost:5000/adduser', userParam, httpOptions);
   }
+
+  deleteUser(id: string) {
+    const userParam = new HttpParams().set('name', id);
+    return this.http.post<any>('http://localhost:5000/adduser', userParam, httpOptions);
+  }
 }

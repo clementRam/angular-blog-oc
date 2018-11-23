@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Subject, Observable} from 'rxjs';
 import {Post} from '../interfaces/post';
-import { Users } from '../interfaces/users.interface';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

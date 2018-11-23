@@ -73,6 +73,25 @@ app.post('/adduser', (req, result) => {
     })
 })
 
+app.post('/deleteuser', () => {
+    console.log(req.body.id)
+    const userToDelete = {
+        id: req.body.id
+    };
+    MongoClient.connect(url, {
+        useNewUrlParser: true
+    }, function (err, db) {
+        if (err) throw err;
+        const dbo = db.db("mydb");
+        dbo.collection("users").deleteOne(userToDelete, (err, res) => {
+            console.log("delete user!");
+            result.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200', 'Content-Type', 'application/json');
+            result.jsonp('ok');
+        })
+        db.close();
+    })
+})
+
 app.listen(5000, function () {
     console.log('Example app listening on port 3000!')
 })

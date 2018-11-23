@@ -1,5 +1,5 @@
 <ul *ngIf="users">
-  <li *ngFor="let user of users">{{user._id}} : {{user.name}}</li>
+  <li *ngFor="let user of users">{{user._id}} : {{user.name}}<button (click)="deleteUser(user._id)">DELETE</button></li>
 </ul>
 id<input type="text" [name]="userId" #userId>
 <button (click)="getUser(userId.value)">GET USER</button>
