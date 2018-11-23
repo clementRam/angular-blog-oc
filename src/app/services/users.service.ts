@@ -9,6 +9,6 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get('http://localhost:3000/users');
+    return this.http.get('http://localhost:5000/users');
   }
 }
