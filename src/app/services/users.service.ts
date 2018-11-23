@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Observable, observable } from 'rxjs';
 import { User } from '../interfaces/users.interface';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-Type':  'application/json',
+    'Content-Type':  'application/x-www-form-urlencoded',
   })
 };
 
@@ -25,7 +25,8 @@ export class UsersService {
     return this.http.get(`http://localhost:5000/user/${id}`);
   }
 
-  addUser(user: User) {
-    return this.http.post<User>('http://localhost:5000/adduser', user, httpOptions);
+  addUser(user: User): Observable<User> {
+    const userParam = new HttpParams().set('name', user.name);
+    return this.http.post<any>('http://localhost:5000/adduser', userParam, httpOptions);
   }
 }

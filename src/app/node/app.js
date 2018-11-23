@@ -53,9 +53,10 @@ app.get('/user/:id', (req, result) => {
 })
 
 app.post('/adduser', (req, result) => {
+    console.log(req.body)
     const newUser = {
         _id: new ObjectId(),
-        name: req.query.name
+        name: req.body.name
     }
     MongoClient.connect(url, {
         useNewUrlParser: true
@@ -67,7 +68,7 @@ app.post('/adduser', (req, result) => {
             result.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200', 'Content-Type', 'application/json');
             result.jsonp('ok');
         })
-        console.log(req.query.name)
+        console.log(req.body.name)
         db.close();
     })
 })
