@@ -1,3 +1,13 @@
 <ul *ngIf="users">
-  <li *ngFor="let user of users">{{user.name}}</li>
+  <li *ngFor="let user of users">{{user._id}} : {{user.name}}</li>
 </ul>
+id<input type="text" [name]="userId" #userId>
+<button (click)="getUser(userId.value)">GET USER</button>
+<div>Result: {{user?._id}} : {{user?.name}}</div>
+<br>
+Add User
+<form (ngSubmit)="handleForm(form)" #form="ngForm">
+  <label for="name">Name</label>
+  <input type="text" name="name" ngModel>
+  <input type="submit" value="Send">
+</form>
